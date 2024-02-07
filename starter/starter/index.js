@@ -88,7 +88,8 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
-// Function to calculate Financial Analysis
+
+// Function to calculate financial analysis
 function calculateFinancialAnalysis(data) {
   // Initialize variables for analysis
   var totalMonths = data.length;
@@ -120,6 +121,15 @@ function calculateFinancialAnalysis(data) {
 
   // Calculate average change
   averageChange /= (totalMonths - 1);
+
+  // Display results in the console
+  console.log("Financial Analysis");
+  console.log("------------------");
+  console.log("Total Months:", totalMonths);
+  console.log("Total: $", totalProfitLoss);
+  console.log("Average Change: $", averageChange.toFixed(2));
+  console.log("Greatest Increase in Profits/Losses:", greatestIncrease.date, "($", greatestIncrease.amount, ")");
+  console.log("Greatest Decrease in Profits/Losses:", greatestDecrease.date, "($", greatestDecrease.amount, ")");
 
   // Display results on the page
   var resultContainer = document.createElement("div");
